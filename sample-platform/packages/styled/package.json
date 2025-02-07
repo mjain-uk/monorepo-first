@@ -1,0 +1,19 @@
+{
+    "name": "@sample-platform/styled",
+    "version": "0.0.1",
+    "private": true,
+    "exports": {
+      "./css": "./styled-system/css/index.mjs",
+      "./jsx": "./styled-system/jsx/index.mjs",
+      "./patterns": "./styled-system/patterns/index.mjs",
+      "./recipes": "./styled-system/recipes/index.mjs"
+    },
+    "scripts": {
+      "prepare": "panda codegen",
+      "dev": "panda codegen --watch",
+      "build": "panda codegen"
+    },
+    "devDependencies": {
+      "@pandacss/dev": "^0.52.0"
+    }
+  }
