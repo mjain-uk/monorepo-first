@@ -15,8 +15,20 @@
   "engines": {
     "node": ">=18"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "packageManager": "yarn@1.22.19",
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "apps/*"
+  ], 
+  "nohoist": [
+    "**/react",
+    "**/react-dom"
+  ],
+  "dependencies": { 
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }

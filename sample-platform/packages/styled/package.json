@@ -1,19 +1,41 @@
 {
-    "name": "@sample-platform/styled",
-    "version": "0.0.1",
-    "private": true,
-    "exports": {
-      "./css": "./styled-system/css/index.mjs",
-      "./jsx": "./styled-system/jsx/index.mjs",
-      "./patterns": "./styled-system/patterns/index.mjs",
-      "./recipes": "./styled-system/recipes/index.mjs"
+  "name": "@sample-platform/styled",
+  "version": "0.0.1",
+  "exports": {
+    "./css": {
+      "types": "./styled-system/css/index.d.ts",
+      "require": "./styled-system/css/index.mjs",
+      "import": "./styled-system/css/index.mjs"
     },
-    "scripts": {
-      "prepare": "panda codegen",
-      "dev": "panda codegen --watch",
-      "build": "panda codegen"
+    "./jsx": {
+      "types": "./styled-system/jsx/index.d.ts",
+      "require": "./styled-system/jsx/index.mjs",
+      "import": "./styled-system/jsx/index.mjs"
     },
-    "devDependencies": {
-      "@pandacss/dev": "^0.52.0"
-    }
+    "./patterns": {
+      "types": "./styled-system/patterns/index.d.ts",
+      "require": "./styled-system/patterns/index.mjs",
+      "import": "./styled-system/patterns/index.mjs"
+    },
+    "./recipes": "./styled-system/recipes/index.mjs",
+    "./tokens": {
+      "types": "./styled-system/tokens/index.d.ts",
+      "require": "./styled-system/tokens/index.mjs",
+      "import": "./styled-system/tokens/index.mjs"
+    },
+    "./types": {
+      "types": "./styled-system/types/index.d.ts",
+      "require": "./styled-system/types/index.mjs",
+      "import": "./styled-system/types/index.mjs"
+    },
+    "./styles.css": "./styled-system/styles.css"
+  },
+  "scripts": {
+    "prepare": "panda codegen",
+    "dev": "panda codegen --watch",
+    "build": "panda codegen"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.52.0"
   }
+}
